@@ -26,7 +26,7 @@
     },
     "homepage": "https://github.com/bidwolf/lexie#readme",
     "dependencies": {
-        "puppeteer": "^13.4.1"
+        "puppeteer": "^13.7.0"
     },
     "devDependencies": {
         "nodemon": "^2.0.15"
