@@ -1,0 +1,12 @@
+const MarketPlace = require('./lib/Classes/MarketPlace');
+const Product = require('./lib/Classes/Product');
+const OthonCallback = require('./lib/sites-callbacks/callbackOthonDeCarvalho');
+const searchApp = require('./lib/search');
+const config = require('./configs/config.json');
+const othon = MarketPlace.prototype.JSONToMarketPlace(config.Othon);
+othon.setContentSearch(OthonCallback.getProductList);
+const product = new Product('Cabo Flexivel');
+const listOfProducts = [];
+listOfProducts.push(product);
+searchApp.searchList(listOfProducts, othon);
+//searchApp.searchProduct(listOfProducts[0].name, othon);
